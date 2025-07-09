@@ -1,0 +1,429 @@
+*{
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: grey;
+}
+h1{
+    margin: 0;
+}
+/* Estilo contenedor info */
+.contenedor{
+    display: grid;
+    grid-template-columns: 0.8fr 2fr;
+    width: 75%;
+}
+.info{
+    padding: 20px;
+    background-image: url(Diseño\ sin\ título.png);
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+
+}
+.img_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 250px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+
+}
+.contacto_iconos{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.verde{
+    color:rgba(0, 128, 0, 0.863) ;
+}
+.skills_puntos{
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin: 0;  
+}
+#icon_contanto{
+    width: 40px;
+    height: 40px;
+}
+.con_puntos2{
+    margin-left: 10px;
+}
+.puntos{
+    margin: 0px 10px ;
+    font-size: 20px;
+    
+}
+.titu_hobbi{
+    margin: 15px 0;
+}
+#icon_hobbi{
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
+    margin-right: 25px;
+}
+.puntos_verdes{
+    display: flex;
+    justify-content: left;
+    margin: 0;
+}
+/* Estilo contenedor sobre mi */
+.sobre_mi{
+    background-image:url(image\ \(1\).png);
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.nombre_sobremi{
+    margin: 30px;
+}
+.nombre{
+    color: rgba(0, 128, 0, 0.863);
+    font-size: 70px;
+    font-family:"Raleway", sans-serif;
+    font-weight: 400;
+}
+.p_sobremi{
+    color: white;
+    font-size: 40px;
+    font-weight: 200;
+    margin: 10px 0;
+}
+.titu_info{
+    margin: 30px;
+}
+.cont_titu{
+    background-color:rgba(0, 128, 0, 0.863) ;
+    width: 40%;
+}
+.p_info{
+    margin: 30px;
+    color: white;
+}
+.con_todo{
+    width: 70%;
+}
+.Educacion_sobre_mi,.Educacion2_sobre_mi{
+    margin: 30px 50px ;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    position: relative;
+}
+.circulos,.circulos2{
+    position: absolute;
+    left: -20px;
+    bottom: 15px;
+    background-color:rgba(0, 128, 0, 0.863) ;
+    border: 2px solid rgba(0, 128, 0, 0.863);
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+}
+.linea{
+    width: 2px;
+    height: 140px;
+    background-color: rgba(0, 128, 0, 0.863);
+    position: absolute;
+    left: -16px;
+    top:  15px;
+}
+.p_Educacion1{
+    margin: 0;
+}
+.p_Educacion2{
+    color:rgba(0, 128, 0, 0.863) ;
+    margin: 0;
+}
+.p_Educacion3{
+    margin: 0;
+    font-size: 13px;
+}
+.linea2{
+    width: 2px;
+    height: 165px;
+    background-color: rgba(0, 128, 0, 0.863);
+    position: absolute;
+    left: -16px;
+    top:  30px;
+}
+
+@media (max-width: 1329px) {
+    .contenedor {
+        width: 85%;
+    }
+    
+}
+
+
+@media (max-width: 1200px) {
+    .contenedor {
+        width: 90%;
+    }
+    
+    .nombre {
+        font-size: 60px;
+    }
+    
+    .p_sobremi {
+        font-size: 30px;
+    }
+}
+@media (max-width: 1107px) {
+    .contenedor {
+        width: 95%;
+    }
+    
+}@media (max-width: 1050px) {
+    .con_todo{
+        width: 80%;
+    }
+    
+}
+@media (max-width: 1019px) {
+    .contenedor {
+        width: 100%;
+    }
+    
+}
+@media (max-width: 906px) {
+    .con_todo{
+        width: 85%;
+    }
+    
+}
+@media (max-width: 872px) {
+    .con_todo{
+        width: 90%;
+    }
+    
+}
+@media (max-width: 840px) {
+    .con_todo{
+        width: 95%;
+    }
+    
+}
+@media (max-width: 811px) {
+    .con_todo{
+        width: 100%;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .info {
+        grid-template-columns: 1fr;
+    }
+    
+    .img_info img {
+        width: 200px;
+    }
+
+    .p_sobremi {
+        font-size: 25px;
+    }
+    
+    .cont_titu {
+        width: 40%;
+    }
+    
+    #icon_hobbi {
+        font-size: 50px;
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 735px) {
+    .cont_titu{
+        width: 50%;
+    }
+    
+}
+@media (max-width: 733px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img_info {
+        margin-bottom: 20px;
+    }
+    
+    .img_info img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: solid black;
+    }
+    
+    .contacto, .skills, .hobbiess {
+        margin-bottom: 25px;
+    }
+    
+    .contacto h1, .skills h1, .titu_hobbi {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: white;
+        background-color: rgba(0, 128, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    
+    .cont_titu {
+        width: 100%;
+
+    }
+    .titu_info{
+        text-align: center;
+    }
+    
+    .nombre {
+        font-size: 42px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .p_sobremi {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .sobre_mi {
+        padding: 20px;
+    }
+    
+    .con_todo {
+        width: 100%;
+    }
+    
+    .Educacion_sobre_mi, .Educacion2_sobre_mi {
+        margin-left: 40px;
+        padding-left: 20px;
+    }
+    
+    .linea, .linea2 {
+        left: 4px;
+    }
+    
+    .circulos, .circulos2 {
+        left: 0;
+    }
+    
+    .hobbiess {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .icon_hobbi1 {
+        display: flex;
+        gap: 20px;
+    }
+    
+    #icon_hobbi {
+        font-size: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        border-radius: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .nombre {
+        font-size: 30px;
+    }
+    
+    .p_sobremi {
+        font-size: 20px;
+    }
+    
+    .cont_titu {
+        width: 100%;
+    }
+    
+    .Educacion_sobre_mi, .Educacion2_sobre_mi {
+        margin: 20px 30px;
+    }
+    .linea{
+        height: 120px;
+    }
+    .linea2{
+        height: 150px;
+    }
+    
+    .puntos {
+        font-size: 16px;
+    }
+    
+    #icon_contanto {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .contacto_iconos, .skills_puntos {
+        gap: 10px;
+    }
+}
+@media(max-width:512px ){
+    .linea2{
+        height: 170px;
+        top:48px;
+    }
+
+}
+@media(max-width:360px ){
+    .linea2{
+        height: 190px;
+        top:48px;
+    }
+    .linea{
+        height:140px ;
+    }
+
+}
+@media(max-width:353px ){
+    .linea2{
+        height: 215px;
+        top:48px;
+    }
+    .linea{
+        height:150px ;
+    }
+
+}
+@media(max-width:332px ){
+    .linea2{
+        height: 250px;
+        top:60px;
+    }
+    .linea{
+        height:170px ;
+    }
+
+}
+
