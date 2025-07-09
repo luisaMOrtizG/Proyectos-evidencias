@@ -1,0 +1,364 @@
+body {
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("captuu.png");
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pokemon-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    max-width: 100%;
+}
+
+.pokemon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--type-color-1, #777777), var(--type-color-2, var(--type-color-1, #777777)));
+    z-index: 1;
+}
+
+.pokemon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.pokemon-name {
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.pokemon-id {
+    color: #777;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.pokemon-image-container {
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(240,240,240,0.8) 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+}
+
+.pokemon-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.type-badge {
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-transform: capitalize;
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.pokemon-info {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+    margin: 10px 0;
+}
+
+.info-item {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.weaknesses-container {
+    margin: 10px 0;
+}
+
+.weaknesses-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.weaknesses-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.weakness-badge {
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 20px;
+    text-transform: capitalize;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.stats-container {
+    margin-top: 10px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.stat-name {
+    width: 70px;
+    text-align: right;
+    padding-right: 5px;
+    color: #555;
+    font-size: 12px;
+}
+
+.stat-bar-container {
+    flex-grow: 1;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 15px;
+}
+
+.stat-bar {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.stat-value {
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 12px;
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--type-color-1, #f5f5f5), var(--type-color-2, var(--type-color-1, #f5f5f5)));
+    opacity: 0.2;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+
+/* Media Queries para responsividad */
+
+@media (max-width: 2000px) {
+    .banner-image {
+        height: 180px;
+    }
+    
+    body {
+        padding: 15px;
+        background-attachment: fixed;
+    }
+    
+    .pokemon-card {
+        width: 280px;
+        padding: 12px;
+    }
+    
+    .pokemon-name {
+        font-size: 18px;
+    }
+    
+    .pokemon-image-container {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .pokemon-image {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .type-badge, 
+    .weakness-badge, 
+    .info-item {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    
+    .stat-name, 
+    .stat-value {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .banner-image {
+        height: 180px;
+    }
+    
+    body {
+        padding: 15px;
+        background-attachment: fixed;
+    }
+    
+    .pokemon-card {
+        width: 280px;
+        padding: 12px;
+    }
+    
+    .pokemon-name {
+        font-size: 18px;
+    }
+    
+    .pokemon-image-container {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .pokemon-image {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .type-badge, 
+    .weakness-badge, 
+    .info-item {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    
+    .stat-name, 
+    .stat-value {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner-image {
+        height: 150px;
+    }
+    
+    .pokemon-card {
+        width: 260px;
+    }
+    
+    .pokemon-image-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .pokemon-image {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-image {
+        height: 130px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+    
+    .pokemon-card {
+        width: 240px;
+    }
+    
+    .pokemon-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .info-item {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-image {
+        height: 90px;
+    }
+    
+    .pokemon-card {
+        width: 90%;
+    }
+    
+    .pokemon-name {
+        font-size: 16px;
+    }
+    
+    .pokemon-id {
+        font-size: 12px;
+    }
+    
+    .pokemon-image-container {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .pokemon-image {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .weaknesses-badges {
+        justify-content: center;
+    }
+}
