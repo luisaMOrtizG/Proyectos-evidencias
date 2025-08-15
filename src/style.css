@@ -1,0 +1,118 @@
+/* Paleta de colores femeninos suaves */
+body {
+  background-color: #fdf6f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  background-color: #d16ba5;
+  background-image: linear-gradient(315deg, #d16ba5 0%, #c777b9 74%);
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.config-panel, .info-panel, .actions-panel {
+  background-color: #fff0f5;
+  border: 2px solid #f8cdda;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(221, 160, 221, 0.2);
+}
+
+.config-panel h2 {
+  color: #c94f7c;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.form-control, .form-select {
+  border-radius: 10px;
+  border: 1px solid #f3c6d3;
+}
+
+.btn-primary {
+  background-color: #e26a92;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #d45883;
+}
+
+.btn-outline-primary {
+  color: #e26a92;
+  border-color: #e26a92;
+}
+
+.btn-outline-primary:hover {
+  background-color: #e26a92;
+  color: white;
+}
+
+.btn-outline-secondary {
+  color: #a2708a;
+  border-color: #a2708a;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #a2708a;
+  color: white;
+}
+
+.btn-outline-danger {
+  color: #d36b6b;
+  border-color: #d36b6b;
+}
+
+.btn-outline-danger:hover {
+  background-color: #d36b6b;
+  color: white;
+}
+
+.boletas-container {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #f3c6d3;
+  box-shadow: 0 0 5px rgba(236, 112, 154, 0.2);
+}
+
+.boletas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+  padding: 10px 0;
+}
+
+.boleta {
+  background-color: #fce1ec;
+  color: #b03e6f;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #f3c6d3;
+  transition: transform 0.2s ease;
+}
+
+.boleta:hover {
+  transform: scale(1.05);
+}
+
+.boleta-destacada {
+  background-color: #f7c2d4;
+  border: 2px solid #e26a92;
+}
+
+.modal-header.bg-success {
+  background-color: #88c9bf !important;
+}
+
+.modal-content {
+  border-radius: 15px;
+}
+
+.modal-body i {
+  color: #88c9bf;
+}
